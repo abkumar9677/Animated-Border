@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Animated Border</title>
+    <style>
+        body{
+            background:#000;
+            margin:0px;
+            padding:0px;
+        }
+        h1{
+            position:absolute;
+            left:50%;
+            top:50%;
+            
+            transform:translate(-50%,-65%);
+        }
+        .back{
+            background:yellow;
+            color:white;
+            height:200px;
+            width:290px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            background:linear-gradient(35deg, orange, green, white, violet, grey, yellow, blue, lightblue);
+            animation:animate 10s linear infinite;
+            animation-direction:inherit;    
+        }
+        .front{
+            background:#405431;
+            height:190px;
+            width:280px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            margin:5px;
+        }
+        @keyframes animate{
+            0%, 100%{
+                background-position:-2000px;
+            }
+            50%{
+                background-position:2000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="front">
+            <h1>Testing<br>animated<br>border</h1>
+        </div>
+    </div>
+</body>
+
+</html>
